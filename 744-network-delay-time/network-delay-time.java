@@ -27,10 +27,10 @@ class Solution {
         pq.add(new Pair(src, 0));
         while (!pq.isEmpty()) {
             Pair top = pq.remove();
-            int node = top.node; 
-            int time = top.time; 
+             int node = top.node; 
+             int time = top.time;
             for (Pair p : adj.get(node)) {
-                int totalTime = time + p.time;
+                int totalTime = top. time + p.time;
                 if (totalTime < ans[p.node]) {
                     ans[p.node] = totalTime;
                     pq.add(new Pair(p.node, totalTime));
