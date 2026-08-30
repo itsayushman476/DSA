@@ -1,9 +1,14 @@
 class Solution {
     public int[] runningSum(int[] nums) {
         int n=nums.length;
-        for(int i=1;i<n;i++){
-             nums[i]=nums[i]+nums[i-1];
+        int result[]=new int[n];
+        for(int i=0;i<n;i++){
+            int sum=0;
+            for(int j=0;j<=i;j++){
+                sum=sum+nums[j];
+            }
+            result[i]=sum;
         }
-        return nums;
+        return result;  
     }
 }
